@@ -9,7 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(Recipe.all) { recipe in
+                Text(recipe.name)
+                    .navigationTitle("Home")
+            }
+        }
+        .navigationViewStyle(.stack) // Enforces stack-based navigation style, very useful for iPad with Split View
+
     }
 }
 

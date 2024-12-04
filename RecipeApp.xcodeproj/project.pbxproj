@@ -75,10 +75,10 @@
 		31F41E992CF25F1800F68F1D = {
 			isa = PBXGroup;
 			children = (
+				31F41EA32CF25F1800F68F1D /* Products */,
 				31F41EA42CF25F1800F68F1D /* RecipeApp */,
 				31F41EB52CF25F1A00F68F1D /* RecipeAppTests */,
 				31F41EBF2CF25F1A00F68F1D /* RecipeAppUITests */,
-				31F41EA32CF25F1800F68F1D /* Products */,
 			);
 			sourceTree = "<group>";
 		};

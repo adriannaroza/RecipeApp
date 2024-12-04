@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct RecipeCard: View {
+    var recipe: Recipe
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            AsyncImage(url: URL(string: recipe.image)) { image in
+                image
+            } placeholder: {
+                Image(systemName: "photo")
+            }
+        }
+        Text(recipe.name)
     }
 }
-
-#Preview {
-    RecipeCard()
+    
+struct RecipeCard_Previews: PreviewProvider {
+    static var previews: some View {
+        RecipeCard(recipe: Recipe.all[0])
+    }
 }
